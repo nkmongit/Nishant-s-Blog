@@ -1,4 +1,4 @@
 ---
-title: "An Extendable Obsidian Publish alternative using Next.JS"
-excerpt: "Create your own template or use someone else's. Changing the template is a matter of updating one line"
+title: A basic site for my Obsidian Second Brain.
+excerpt: I will be documenting my learning and saving all the archives and important roadmaps in this public site of mine.
 ---
