@@ -1,6 +1,6 @@
 ---
 date created: Saturday, August 3rd 2024, 2:57:49 pm
-date modified: Saturday, August 3rd 2024, 4:27:23 pm
+date modified: Saturday, August 3rd 2024, 6:35:47 pm
 tags:
   - 100xdevs
   - moc/web-dev
@@ -21,13 +21,13 @@ tags:
 # **Simple frontend, DOM**
 
 
-| Easy                                                                                                                      | Medium                              | Hard                                                |
-| ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- | --------------------------------------------------- |
-| Intro to DOM, DOM Tree Structure                                                                                          |                                     |                                                     |
-| Common DOM APIs (getElementById, getElementsByClassName, querySelector, innerHTML, innerText, getAttribute, setAttribute) |                                     |                                                     |
-| Event handlers, onClick, stopPropagation, localStorage                                                                    |                                     |                                                     |
-|                                                                                                                           | DOM Manipulation, Dynamic frontends |                                                     |
-|                                                                                                                           |                                     | Creating  a simple reconciler, Foundation for react |
+| Easy                                                                                                                                  | Medium                              | Hard                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- | --------------------------------------------------- |
+| Intro to DOM, DOM Tree Structure                                                                                                      |                                     |                                                     |
+| Common DOM APIs (getElementById, <br>getElementsByClassName, querySelector, innerHTML,<br> innerText, getAttribute, <br>setAttribute) |                                     |                                                     |
+| Event handlers, onClick, stopPropagation, localStorage                                                                                |                                     |                                                     |
+|                                                                                                                                       | DOM Manipulation, Dynamic frontends |                                                     |
+|                                                                                                                                       |                                     | Creating  a simple reconciler, Foundation for react |
 # **Project**
 
 1. Pure frontend TODO app using DOM Manipulation.
