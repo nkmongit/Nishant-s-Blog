@@ -1,6 +1,6 @@
 ---
 date created: Saturday, August 3rd 2024, 4:35:58 pm
-date modified: Saturday, August 3rd 2024, 6:18:20 pm
+date modified: Saturday, August 3rd 2024, 6:28:10 pm
 tags:
   - 100xdevs
   - moc/web3
@@ -75,3 +75,25 @@ Hash functions have several important properties:
 3. **Pre-image resistance**: It should be computationally infeasible to reverse the hash function (i.e., find the original input given its hash output).
 4. **Small changes in input produce large changes in output**: Even a tiny change in the input should drastically change the hash output.
 5. **Collision resistance**: It should be computationally infeasible to find two different inputs that produce the same hash output.
+
+### Is this a hashing algorithm?
+
+What if I try “hashing” a string by increasing each alphabet’s value by one. Do you think this follows all the rules we’ve written above?
+![[hashing2.png]]
+
+### SHA-256
+
+Lets try out a famous hash function, SHA-256 here - [https://emn178.github.io/online-tools/sha256.html](https://emn178.github.io/online-tools/sha256.html)
+
+#### Node.js code for generating SHA-256
+
+```javascript
+const crypto = require('crypto');
+
+const input = "100xdevs";
+const hash = crypto.createHash('sha256').update(input).digest('hex');
+
+console.log(hash)
+```
+
+![[sha256.png]]
