@@ -1,6 +1,6 @@
 ---
 date created: Saturday, August 3rd 2024, 3:29:58 pm
-date modified: Saturday, August 3rd 2024, 7:55:40 pm
+date modified: Sunday, August 4th 2024, 1:56:27 am
 tags:
   - 100xdevs
   - moc/web3
@@ -68,7 +68,7 @@ Pre-requisite - **Basic Javascript/Node.js**
 |                                                                         | abis, bytecode         |      |
 | Sepolia test network, airdrop yourself some tokens, contract deployment |                        |      |
 
-## Solidity advance
+## Solidity Advance
 
 | Easy                                                                 | Medium                                             | Hard |
 | -------------------------------------------------------------------- | -------------------------------------------------- | ---- |
@@ -139,5 +139,5 @@ Pre-requisite - **Basic Javascript/Node.js**
 
 **Projects**
 
-Creating a crypto payment gateway (web3 stripe)
-Creating a Centralised exchange / Creating a crypto gambling website
+Creating a crypto payment gateway (web3 stripe).
+Creating a Centralised exchange / Creating a crypto gambling website.

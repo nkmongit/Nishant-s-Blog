@@ -1,6 +1,6 @@
 ---
 date created: Saturday, August 3rd 2024, 4:35:58 pm
-date modified: Saturday, August 3rd 2024, 6:28:10 pm
+date modified: Sunday, August 4th 2024, 11:49:36 pm
 tags:
   - 100xdevs
   - moc/web3
@@ -97,3 +97,40 @@ console.log(hash)
 ```
 
 ![[sha256.png]]
+
+
+# Intro to Proof of Work
+### Assignment #1
+
+What if I ask you the following question — Give me an input string that outputs a SHA-256 hash that starts with `00000` . **How will you do it?**
+
+**A: You will have to brute force until you find a value that starts with** `**00000**`
+Node.js code
+
+
+```javascript
+const crypto = require("crypto");
+let input = "100xDevs";
+let hash = crypto.createHash("sha256").update(input).digest("hex");
+let stopComputation = 0;
+
+while (!String(hash).startsWith("00000")) {
+	let randomValue = (Math.random() + 1).toString(36).substring(7);
+	input = randomValue;
+	hash = crypto.createHash("sha256").update(randomValue).digest("hex");
+}
+console.log(hash);
+```
+
+![[pic1.png]]
+
+`This is what mostly miners do "kind of" mining that certain hash for the bitcoin, that's a rason they need heavy GPUs, because that GPU is running that heavy computation.`
+`Solving this problem is called "Proof of Work"`
+#### What miners do?
+- Let's assume that you have found a string which gives '0000000' to you as starting hash values, now you have done "<font color="#4bacc6">proof of work</font>". but here bitcoin needs to constantly mine.
+- Miners are constantly solving a problem, which is why the miners have to do this.
+- Like every time they are mining, we can keep giving them "**prefixes**".
+- They have to find a string but their input string should have "**prefix**" that was provided.
+- So the miners are doing like they have given a "**prefix**", and this "**prefix**" keeps changing every time, they have to find what's called a **nonce**.
+
+![[pic2.png]]
