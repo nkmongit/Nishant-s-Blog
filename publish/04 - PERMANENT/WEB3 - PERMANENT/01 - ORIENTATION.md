@@ -1,6 +1,6 @@
 ---
 date created: Saturday, August 3rd 2024, 4:35:58 pm
-date modified: Sunday, August 4th 2024, 11:49:36 pm
+date modified: Saturday, August 10th 2024, 5:39:26 pm
 tags:
   - 100xdevs
   - moc/web3
@@ -100,7 +100,7 @@ console.log(hash)
 
 
 # Intro to Proof of Work
-### Assignment #1
+#### Assignment #1
 
 What if I ask you the following question — Give me an input string that outputs a SHA-256 hash that starts with `00000` . **How will you do it?**
 
@@ -133,4 +133,84 @@ console.log(hash);
 - They have to find a string but their input string should have "**prefix**" that was provided.
 - So the miners are doing like they have given a "**prefix**", and this "**prefix**" keeps changing every time, they have to find what's called a **nonce**.
 
+#### Assignment #2
+
+What if I ask you that the `input string` should start with `100xdevs` ? How would the code change?
+
+Node.js code
+
+```javascript
+const crypto = require("crypto");
+let input = "100xDevs";
+let hash = crypto.createHash("sha256").update(input).digest("hex");
+
+while (!String(hash).startsWith("00000")) {
+	let randomValue = (Math.random() + 1).toString(36).substring(7);
+	input = "100xDevs" + randomValue;
+	hash = crypto.createHash("sha256").update(input).digest("hex");
+}
+console.log(hash);
+```
+
 ![[pic2.png]]
+
+#### Assignment #3
+
+What if I ask you to `find` a nonce for the following input -
+
+```javascript
+harkirat => Raman | Rs 100
+Ram => Ankit | Rs 10
+```
+
+Node.js code
+
+```javascript
+const crypto = require("crypto");
+let input = "100xDevs";
+let hash = crypto.createHash("sha256").update(input).digest("hex");
+let foundHash = "";
+
+while (!String(hash).startsWith("00000")) {
+	let randomValue = (Math.random() + 1).toString(36).substring(7);
+	input =
+	`harkirat => Raman | Rs 100
+	Ram => Ankit | Rs 10` + randomValue;
+	hash = crypto.createHash("sha256").update(input).digest("hex");
+	foundHash = input;
+}
+console.log(hash);
+console.log(foundHash);
+```
+
+![[pic3.png]]
+#### Assignment #4
+Let's explore [Anders Brown Worth Blockchain Video](https://andersbrownworth.com/blockchain/)
+
+# Intro to Bitcoin
+
+Bitcoin white paper was released in 2008 - [https://bitcoin.org/bitcoin.pdf](https://bitcoin.org/bitcoin.pdf)
+
+#### 1. Introduction
+
+![[whitpaper1.png]]![[whitepaper2.png]]
+#### 2. Transactions 
+
+![[whitepaper3.png]]
+
+![[whitepaper4.png]]
+#### 3. Timestamp Server
+
+![[whitepaper5.png]]
+
+#### 4. Proof of Work
+
+![[whitepaper6.png]]
+
+#### 5. Network
+
+![[whitepaper7.png]]
+
+#### 6. Incentive
+
+![[whitepaper8.png]]
